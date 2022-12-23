@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  db:
+    container_name: v3-stack-db-dev
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./prisma/docker/db:/var/lib/postgresql/data
+
+volumes:
+  prisma-postgres:
+    external: true

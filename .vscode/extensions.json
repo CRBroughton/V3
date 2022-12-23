@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+      "Vue.volar", 
+      "dbaeumer.vscode-eslint", 
+      "usernamehw.errorlens",
+      "Prisma.prisma",
+      "mhutchie.git-graph",
+      "eamodio.gitlens",
+      "antfu.vite",
+      "vscode-icons-team.vscode-icons",
+      "formulahendry.auto-rename-tag",
+      "ms-azuretools.vscode-docker",
+      "bradlc.vscode-tailwindcss"
+    ]
+  }

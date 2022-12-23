@@ -1,0 +1,10 @@
+node_modules
+prisma/docker/**
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+*/*.db
