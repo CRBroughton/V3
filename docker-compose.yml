@@ -12,8 +12,4 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./prisma/docker/db:/var/lib/postgresql/data
-
-volumes:
-  prisma-postgres:
-    external: true
+      - ~/prisma-postgres:/var/lib/postgresql/data
