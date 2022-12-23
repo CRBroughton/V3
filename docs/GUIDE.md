@@ -22,10 +22,11 @@ TRPC is one of the core components of V3, enabling database querys, mutations an
 A typical flow for a TRPC router may look like:
 
 ```typescript
-// server/routers/user
+// server/api/routers/user
 import { z } from 'zod'
-import { User } from '@prisma/client'
+import type { User } from '@prisma/client'
 import { publicProcedure, router } from '../../trpc'
+import type { ValidatePrisma } from '../../../utils/validatePrisma'
 
 // A TRPC router example
 export const userRouter = router({
@@ -41,7 +42,7 @@ export const userRouter = router({
     // Database 'mutations', validate through Prisma
     .mutation(async (req) => {
       // Create a new user on our database
-      const user = req.ctx.prisma.user.create({
+      const user = req.ctx.prisma.user.create<ValidatePrisma<User>>({
         data: req.input,
       })
       return user
@@ -53,7 +54,7 @@ export const userRouter = router({
 These type-safe routers are then exported through a global router object, where a global AppRouter type is generated for the front-end:
 
 ```typescript
-//server/router.ts
+//server/api/router.ts
 import { router } from './trpc'
 import { userRouter } from './routers/user'
 
@@ -70,26 +71,30 @@ into the TRPC client router:
 
 ```typescript
 // Types imported from TRPC & Prisma
-import type { AppRouter } from '@server/router'
 import type { User } from '@prisma/client'
-// A simple wrapper to instantiate the TRPC client
-import { useTRPCClient } from '../composables'
 
 export const store = () => {
+  // Get the TRPC client instance
+  const { $client } = useNuxtApp()
   // A type-safe User array; This same type
   // is used to validate the servers TRPC procedure client input
   const users = ref<User[]>()
 
-  // The TRPC AppRouter type exposes all our procedures
-  const { trpc } = useTRPCClient<AppRouter>(import.meta.env.VITE_TRPC_URL)
+  const getUsers = async () => {
+    users.value = await $client.user.getUsers.query()
+  }
 
   // Creating a type-safe call to our createUser procedure
   const createUser = async (name: string, email: string) => {
     // Here you can see the front end accessing the 'user' router
-    await trpc.user.createUser.mutate({ id: Math.random().toString(), name, email })
+    await $client.user.createUser({ id: Math.random().toString(), name, email })
     await getAllUsers()
   }
-  ...
-}
 
+  return {
+    users,
+    getUsers,
+    createUser,
+  }
+}
 ```
