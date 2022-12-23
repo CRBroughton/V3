@@ -16,23 +16,19 @@ Before using this template, ensure you have node, npm and pnpm installed. pnpm i
 
 ### Installation & Getting Started
 
-Installs dependencies
+Installs dependencies & generate Prisma types
 
-```pnpm i```
+```pnpm i && pnpm run prisma:generate```
 
 Generate your first migration:
 
 ```pnpm run prisma:migrate```
 
-Generates new types
-
-```pnpm run prisma:generate```
-
 Seeds the Db
 
 ```pnpm run prisma:seed```
 
-Now run both the below command to start the sevrer:
+Now run the below command to start the sevrer:
 
 ```pnpm run dev```
 
