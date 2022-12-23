@@ -1,42 +1,39 @@
-# Nuxt 3 Minimal Starter
+# V3 Template
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A Vue, TRPC & Prisma starter template, inspired by the T3 Stack. This template includes:
 
-## Setup
+- Nuxt 3
+- Typescript
+- Prisma
+- Zod
+- TRPC
 
-Make sure to install the dependencies:
 
-```bash
-# yarn
-yarn install
+### Prerequisites
 
-# npm
-npm install
+Before using this template, ensure you have node, npm and pnpm installed. pnpm is used for installing and updating packages.
 
-# pnpm
-pnpm install --shamefully-hoist
-```
+### Installation & Getting Started
 
-## Development Server
+Installs dependencies
 
-Start the development server on http://localhost:3000
+```pnpm i```
 
-```bash
-npm run dev
-```
+Generate your first migration:
 
-## Production
+```pnpm run prisma:migrate```
 
-Build the application for production:
+Generates new types
 
-```bash
-npm run build
-```
+```pnpm run prisma:generate```
 
-Locally preview production build:
+Seeds the Db
 
-```bash
-npm run preview
-```
+```pnpm run prisma:seed```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Now run both the below command to start the sevrer:
+
+```pnpm run dev```
+
+
+Read the docs/GUIDE.md for more information.
