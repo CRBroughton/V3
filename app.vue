@@ -6,7 +6,7 @@ const compuser = user.data.value
 </script>
 
 <template>
-  <DefaultLayout>
+  <NuxtLayout>
     <Packages />
-  </DefaultLayout>
+  </NuxtLayout>
 </template>
