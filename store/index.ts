@@ -3,7 +3,7 @@ import { match } from 'ts-pattern'
 
 export const store = () => {
   const { $client } = useNuxtApp()
-  const user = ref<User[]>()
+  const user = ref<User[]>([])
 
   const getUsers = async () => {
     const response = await $client.user.getUsers.query()
