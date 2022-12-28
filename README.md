@@ -5,6 +5,7 @@ A Vue, TRPC & Prisma starter template, inspired by the T3 Stack. This template i
 - Nuxt 3
 - Tailwind
 - Typescript
+- TS-Pattern
 - Prisma
 - Zod
 - TRPC
