@@ -25,6 +25,7 @@ A typical flow for a TRPC router may look like:
 // server/api/routers/user
 import { z } from 'zod'
 import type { User } from '@prisma/client'
+import { TRPCError } from '@trpc/server'
 import { publicProcedure, router } from '../../trpc'
 import type { ValidatePrisma } from '../../../utils/validatePrisma'
 
@@ -32,6 +33,20 @@ import type { ValidatePrisma } from '../../../utils/validatePrisma'
 export const userRouter = router({
   // Procedures are functional 'endpoints'
   // A router can have any number of procedures
+  getUsers: publicProcedure
+    .query(async (req) => {
+      const users = await req.ctx.prisma.user.findMany()
+      if (!users) {
+        return {
+          type: 'error',
+          error: new TRPCError({ message: 'no users', code: 'NOT_FOUND' }),
+        } as const
+      }
+      return {
+        type: 'ok',
+        data: users,
+      } as const
+    }),
   createUser: publicProcedure
     // Client input, validated by TypeScript with Zod
     .input(z.object({
@@ -81,7 +96,20 @@ export const store = () => {
   const users = ref<User[]>()
 
   const getUsers = async () => {
-    users.value = await $client.user.getUsers.query()
+    const response = await $client.user.getUsers.query()
+
+    // Type-safe match operator using ts-pattern
+    user.value
+    = match(response)
+        .with(
+          { type: 'error' },
+          () => { throw new Error('no users found') },
+        )
+        .with(
+          { type: 'ok' },
+          () => { return response.data! },
+        )
+        .exhaustive()
   }
 
   // Creating a type-safe call to our createUser procedure

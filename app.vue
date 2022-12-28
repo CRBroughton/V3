@@ -1,12 +1,18 @@
 <script setup lang="ts">
-const { $client } = useNuxtApp()
-const user = await $client.user.getUsers.useQuery()
+import { store } from './store'
 
-const compuser = user.data.value
+const { user, getUsers } = store()
+
+onMounted(async () => {
+  await getUsers()
+})
 </script>
 
 <template>
   <NuxtLayout>
+    <div v-if="user">
+      {{ user }}
+    </div>
     <Packages />
   </NuxtLayout>
 </template>
