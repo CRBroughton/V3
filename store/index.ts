@@ -6,17 +6,17 @@ export const store = () => {
   const user = ref<User[]>([])
 
   const getUsers = async () => {
-    const response = await $client.user.getUsers.query()
+    const { type, error, data } = await $client.user.getUsers.query()
 
     user.value
-     = match(response)
+     = match(type)
         .with(
-          { type: 'error' },
-          () => { throw new Error(response.error?.message) },
+          'error',
+          () => { throw new Error(error?.message) },
         )
         .with(
-          { type: 'ok' },
-          () => { return response.data! },
+          'ok',
+          () => { return data! },
         )
         .exhaustive()
   }

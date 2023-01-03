@@ -96,18 +96,18 @@ export const store = () => {
   const users = ref<User[]>()
 
   const getUsers = async () => {
-    const response = await $client.user.getUsers.query()
+    const { type, error, data } = await $client.user.getUsers.query()
 
     // Type-safe match operator using ts-pattern
     user.value
-    = match(response)
+     = match(type)
         .with(
-          { type: 'error' },
-          () => { throw new Error('no users found') },
+          'error',
+          () => { throw new Error(error?.message) },
         )
         .with(
-          { type: 'ok' },
-          () => { return response.data! },
+          'ok',
+          () => { return data! },
         )
         .exhaustive()
   }
