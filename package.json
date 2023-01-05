@@ -23,14 +23,14 @@
     "npm-check": "^6.0.1",
     "nuxt": "3.0.0",
     "postcss": "^8.4.20",
-    "prisma": "^4.8.0",
+    "prisma": "4.8.1",
     "tailwindcss": "^3.2.4",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.9.4",
     "vue-tsc": "1.0.22"
   },
   "dependencies": {
-    "@prisma/client": "^4.8.0",
+    "@prisma/client": "4.8.1",
     "@trpc/client": "^10.7.0",
     "@trpc/server": "^10.7.0",
     "superjson": "^1.12.1",
