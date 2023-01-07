@@ -14,7 +14,7 @@ specifiers:
   prisma: 4.8.1
   superjson: ^1.12.1
   tailwindcss: ^3.2.4
-  trpc-nuxt: ^0.4.4
+  trpc-nuxt: 0.5.0
   ts-node-dev: ^2.0.0
   ts-pattern: ^4.0.6
   typescript: ^4.9.4
@@ -26,7 +26,7 @@ dependencies:
   '@trpc/client': 10.8.1_@trpc+server@10.8.1
   '@trpc/server': 10.8.1
   superjson: 1.12.1
-  trpc-nuxt: 0.4.4_ovvwb3xsu5edgbiubaufgqphqu
+  trpc-nuxt: 0.5.0_ovvwb3xsu5edgbiubaufgqphqu
   ts-pattern: 4.0.6
   zod: 3.20.2
 
@@ -6923,12 +6923,12 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /trpc-nuxt/0.4.4_ovvwb3xsu5edgbiubaufgqphqu:
-    resolution: {integrity: sha512-nCJ4O4u+dlj8iCOYWgfeQLutc0Nz04VtIYK+XAa3kc4XXksSm0Ty7PuW9q6WOWukTiDIxC/fYdBwtx1e5F7Iyg==}
+  /trpc-nuxt/0.5.0_ovvwb3xsu5edgbiubaufgqphqu:
+    resolution: {integrity: sha512-PZpmwc2QYkC1CWxGo3brFwou88zoP6cB9+GmlIffJJLKCmTY7XzIfarNxSbCocdeymJjMpcL/94t9kJm85/eTQ==}
     engines: {node: ^16.13.0 || ^18.12.0}
     peerDependencies:
-      '@trpc/client': ^10.0.0
-      '@trpc/server': ^10.0.0
+      '@trpc/client': ^10.8.0
+      '@trpc/server': ^10.8.0
     dependencies:
       '@trpc/client': 10.8.1_@trpc+server@10.8.1
       '@trpc/server': 10.8.1
