@@ -62,6 +62,12 @@ With your models defined, Prisma can then automatically create new migrations fo
 database with `pnpm run prisma:migrate`. You can then begin to use the type safe Prisma
 client to interact with your database (see TRPC section below).
 
+By default, V3 is set up with a SQLite database, however I have included
+the PostgreSQL database connector, as well as a docker-compose.yml file
+if you should wish to switch; Simply comment out the existing SQLite
+connector in the schema.prisma file, and uncomment the PostgreSQL connector, provide your database parameters in the .env file and run
+`docker compose up -d`.
+
 
 ## TRPC
 
