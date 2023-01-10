@@ -1,6 +1,6 @@
-# V3 Template
+# V3
 
-A Vue, TRPC & Prisma starter template, inspired by the T3 Stack. This template includes:
+A Vue, TRPC & Prisma stack, inspired by the T3 Stack. V3 includes:
 
 - Nuxt 3
 - Tailwind
