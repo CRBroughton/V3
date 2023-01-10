@@ -15,6 +15,54 @@ Prisma Schema-->|--> Database Table(migrations)
                 |--> Vue 3(imported types)
 ```
 
+## Prisma
+
+Prisma enables several core features of V3, including data modelling, automatic
+migration generation and a type safe client.
+
+First, describe your Prisma schema via Models, which will be used to create your
+database migrations. 
+
+
+```typescript
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// datasource db {
+//   provider = "postgresql"
+//   url      = env("DATABASE_URL")
+// }
+
+model User {
+  id String @id @default(uuid())
+  name String
+  email String
+  tasks Task[]
+}
+
+model Task {
+  id String @id @default(uuid())
+  owner User @relation(fields: [ownerId], references: [id])
+  ownerId String
+  title String
+  description String?
+}
+```
+
+With your models defined, Prisma can then automatically create new migrations for your
+database with `pnpm run prisma:migrate`. You can then begin to use the type safe Prisma
+client to interact with your database (see TRPC section below).
+
+
 ## TRPC
 
 TRPC is one of the core components of V3, enabling database querys, mutations and client requests. In V3, TRPC is directly paired with both Prisma and Zod to ensure all are type safe.
@@ -35,6 +83,7 @@ export const userRouter = router({
   // A router can have any number of procedures
   getUsers: publicProcedure
     .query(async (req) => {
+      // Types-safe prisma client
       const users = await req.ctx.prisma.user.findMany()
       if (!users) {
         return {
