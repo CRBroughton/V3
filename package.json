@@ -19,7 +19,7 @@
     "@antfu/eslint-config": "0.34.1",
     "@types/node": "18.11.18",
     "autoprefixer": "^10.4.13",
-    "eslint": "8.31.0",
+    "eslint": "8.32.0",
     "npm-check": "^6.0.1",
     "nuxt": "3.0.0",
     "postcss": "8.4.21",
