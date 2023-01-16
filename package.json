@@ -1,5 +1,7 @@
 {
   "private": true,
+  "name": "v3",
+  "version": "0.0.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "pnpm run prisma:generate && nuxt dev",
@@ -10,6 +12,9 @@
     "prisma:migrate": "npx prisma migrate dev",
     "prisma:studio": "npx prisma studio",
     "prisma:seed": "npx prisma migrate reset",
+    "changeset": "npx changeset",
+    "changeset:status": "npx changeset status --verbose",
+    "changeset:version": "npx changeset version",
     "check": "NPM_CHECK_INSTALLER=pnpm npm-check -u"
   },
   "prisma": {
@@ -17,6 +22,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "0.34.1",
+    "@changesets/cli": "^2.26.0",
     "@types/node": "18.11.18",
     "autoprefixer": "^10.4.13",
     "eslint": "8.32.0",
