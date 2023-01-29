@@ -23,11 +23,11 @@
     "seed": "ts-node-dev -P tsconfig.server.json prisma/seed.ts"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "0.34.1",
+    "@antfu/eslint-config": "0.35.1",
     "@changesets/cli": "^2.26.0",
     "@types/node": "18.11.18",
     "autoprefixer": "^10.4.13",
-    "eslint": "8.32.0",
+    "eslint": "8.33.0",
     "npm-check": "^6.0.1",
     "nuxt": "3.1.1",
     "postcss": "8.4.21",
