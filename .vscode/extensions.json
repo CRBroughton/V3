@@ -10,6 +10,7 @@
       "vscode-icons-team.vscode-icons",
       "formulahendry.auto-rename-tag",
       "ms-azuretools.vscode-docker",
-      "bradlc.vscode-tailwindcss"
+      "bradlc.vscode-tailwindcss",
+      "moalamri.inline-fold"
     ]
   }
