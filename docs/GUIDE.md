@@ -102,7 +102,7 @@ export const userRouter = router({
         data: users,
       } as const
     }),
-  createUser: publicProcedure
+    createUser: publicProcedure
     // Client input, validated by TypeScript with Zod
     .input(z.object({
       id: z.string(),
@@ -112,10 +112,22 @@ export const userRouter = router({
     // Database 'mutations', validate through Prisma
     .mutation(async (req) => {
       // Create a new user on our database
-      const user = req.ctx.prisma.user.create<ValidatePrisma<User>>({
+      const user = await req.ctx.prisma.user.create({
         data: req.input,
       })
-      return user
+      if (!user) {
+        return {
+          type: 'error',
+          error: new TRPCError({
+            message: 'failed to create a user',
+            code: 'INTERNAL_SERVER_ERROR',
+          }),
+        } as const
+      }
+      return {
+        type: 'ok',
+        data: user,
+      } as const
     }),
 })
 
@@ -151,27 +163,36 @@ export const store = () => {
   const users = ref<User[]>()
 
   const getUsers = async () => {
+    // Here you can see the front end accessing the 'user' router
     const { type, error, data } = await $client.user.getUsers.query()
 
     // Type-safe match operator using ts-pattern
-    user.value
-     = match(type)
-        .with(
-          'error',
-          () => { throw new Error(error?.message) },
-        )
-        .with(
-          'ok',
-          () => { return data! },
-        )
-        .exhaustive()
+    match(type)
+      .with(
+        'error',
+        () => { throw new Error(error?.message) },
+      )
+      .with(
+        'ok',
+        () => { users.value = data! },
+      )
+      .exhaustive()
   }
 
   // Creating a type-safe call to our createUser procedure
   const createUser = async (name: string, email: string) => {
-    // Here you can see the front end accessing the 'user' router
-    await $client.user.createUser({ id: Math.random().toString(), name, email })
-    await getAllUsers()
+    const { type, error, data } = await $client.user.createUser.mutate(input)
+
+    match(type)
+      .with(
+        'error',
+        () => { throw new Error(error?.message) },
+      )
+      .with(
+        'ok',
+        () => { user.value = data! },
+      )
+      .exhaustive()
   }
 
   return {

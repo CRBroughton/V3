@@ -31,7 +31,10 @@ export const userRouter = router({
       if (!user) {
         return {
           type: 'error',
-          error: new TRPCError({ message: 'failed to create a user', code: 'INTERNAL_SERVER_ERROR' }),
+          error: new TRPCError({
+            message: 'failed to create a user',
+            code: 'INTERNAL_SERVER_ERROR',
+          }),
         } as const
       }
       return {
