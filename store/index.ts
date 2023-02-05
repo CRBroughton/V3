@@ -38,6 +38,7 @@ export const store = () => {
 
   return {
     user,
+    users,
     createUser,
     getUsers,
   }

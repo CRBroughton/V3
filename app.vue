@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { store } from './store'
 
-const { user, getUsers } = store()
+const { users, getUsers } = store()
 
 onMounted(async () => {
   await getUsers()
@@ -10,9 +10,7 @@ onMounted(async () => {
 
 <template>
   <NuxtLayout>
-    <div v-if="user">
-      {{ user }}
-    </div>
+    {{ users }}
     <Packages />
   </NuxtLayout>
 </template>
