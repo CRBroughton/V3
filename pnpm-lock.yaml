@@ -4,8 +4,8 @@ specifiers:
   '@antfu/eslint-config': 0.35.1
   '@changesets/cli': ^2.26.0
   '@prisma/client': 4.9.0
-  '@trpc/client': 10.9.1
-  '@trpc/server': 10.9.1
+  '@trpc/client': 10.10.0
+  '@trpc/server': 10.10.0
   '@types/node': 18.11.18
   autoprefixer: ^10.4.13
   eslint: 8.33.0
@@ -24,10 +24,10 @@ specifiers:
 
 dependencies:
   '@prisma/client': 4.9.0_prisma@4.9.0
-  '@trpc/client': 10.9.1_@trpc+server@10.9.1
-  '@trpc/server': 10.9.1
+  '@trpc/client': 10.10.0_@trpc+server@10.10.0
+  '@trpc/server': 10.10.0
   superjson: 1.12.2
-  trpc-nuxt: 0.5.0_g35fzdz3dguu63j4c7uerwgeli
+  trpc-nuxt: 0.5.0_2a7aflczskeqccy5ulnfgozswm
   ts-pattern: 4.1.3
   zod: 3.20.2
 
@@ -1687,16 +1687,16 @@ packages:
       defer-to-connect: 1.1.3
     dev: true
 
-  /@trpc/client/10.9.1_@trpc+server@10.9.1:
-    resolution: {integrity: sha512-9ma44dFU40KHIEaMdyjRJd9LloFyZZXeAbZJTi2+XK/5sj64FRqqef3fWTj2dBc7A09pk8gls4Tqa3tNC98jSg==}
+  /@trpc/client/10.10.0_@trpc+server@10.10.0:
+    resolution: {integrity: sha512-HRVGkOsR4FIYpyQILP84HLbj6pRnLKgxy4AIelTf9d9TxD60M5bNhbR2Uz3hqNSb9a2ppaRJBLv7twlV9b4qHQ==}
     peerDependencies:
-      '@trpc/server': 10.9.1
+      '@trpc/server': 10.10.0
     dependencies:
-      '@trpc/server': 10.9.1
+      '@trpc/server': 10.10.0
     dev: false
 
-  /@trpc/server/10.9.1:
-    resolution: {integrity: sha512-cUbj8KphlH0IHuoVUhkZrN1E+FdfRpagglqhblyj8VPJKkjzTjb6D8MYHlXhiX7Tdmtwy2w0ev39HBkzlM0thg==}
+  /@trpc/server/10.10.0:
+    resolution: {integrity: sha512-tCTqcqBT+3nebYFTHtwM877qo5xQPtVlptxKdUzMVWleWT4lFTL4oddk45qVURToci2iMbVJjd4jQU9y9/XwlQ==}
     dev: false
 
   /@trysound/sax/0.2.0:
@@ -7760,15 +7760,15 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /trpc-nuxt/0.5.0_g35fzdz3dguu63j4c7uerwgeli:
+  /trpc-nuxt/0.5.0_2a7aflczskeqccy5ulnfgozswm:
     resolution: {integrity: sha512-PZpmwc2QYkC1CWxGo3brFwou88zoP6cB9+GmlIffJJLKCmTY7XzIfarNxSbCocdeymJjMpcL/94t9kJm85/eTQ==}
     engines: {node: ^16.13.0 || ^18.12.0}
     peerDependencies:
       '@trpc/client': ^10.8.0
       '@trpc/server': ^10.8.0
     dependencies:
-      '@trpc/client': 10.9.1_@trpc+server@10.9.1
-      '@trpc/server': 10.9.1
+      '@trpc/client': 10.10.0_@trpc+server@10.10.0
+      '@trpc/server': 10.10.0
       h3: 1.0.2
       ofetch: 1.0.0
       ohash: 1.0.0
