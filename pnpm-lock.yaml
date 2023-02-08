@@ -14,7 +14,7 @@ specifiers:
   postcss: 8.4.21
   prisma: 4.10.0
   superjson: 1.12.2
-  tailwindcss: ^3.2.4
+  tailwindcss: 3.2.6
   trpc-nuxt: 0.6.0
   ts-node-dev: ^2.0.0
   ts-pattern: 4.1.4
@@ -41,7 +41,7 @@ devDependencies:
   nuxt: 3.1.2_2l34rc32wlq4gbsa265riqj2ua
   postcss: 8.4.21
   prisma: 4.10.0
-  tailwindcss: 3.2.4_postcss@8.4.21
+  tailwindcss: 3.2.6_postcss@8.4.21
   ts-node-dev: 2.0.0_4bewfcp2iebiwuold25d6rgcsy
   typescript: 4.9.5
   vue-tsc: 1.0.24_typescript@4.9.5
@@ -7613,8 +7613,8 @@ packages:
       stable: 0.1.8
     dev: true
 
-  /tailwindcss/3.2.4_postcss@8.4.21:
-    resolution: {integrity: sha512-AhwtHCKMtR71JgeYDaswmZXhPcW9iuI9Sp2LvZPo9upDZ7231ZJ7eA9RaURbhpXGVlrjX4cFNlB4ieTetEb7hQ==}
+  /tailwindcss/3.2.6_postcss@8.4.21:
+    resolution: {integrity: sha512-BfgQWZrtqowOQMC2bwaSNe7xcIjdDEgixWGYOd6AL0CbKHJlvhfdbINeAW76l1sO+1ov/MJ93ODJ9yluRituIw==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
