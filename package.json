@@ -27,7 +27,7 @@
     "@changesets/cli": "^2.26.0",
     "@types/node": "18.13.0",
     "autoprefixer": "^10.4.13",
-    "eslint": "8.33.0",
+    "eslint": "8.34.0",
     "npm-check": "^6.0.1",
     "nuxt": "3.2.0",
     "postcss": "8.4.21",
