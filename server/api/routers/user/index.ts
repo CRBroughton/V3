@@ -1,9 +1,27 @@
 import { z } from 'zod'
-import type { User } from '@prisma/client'
 import { TRPCError } from '@trpc/server'
 import { publicProcedure, router } from '../../trpc'
+import { getServerSession } from '#auth'
 
 export const userRouter = router({
+  auth: publicProcedure
+    .query(async () => {
+      eventHandler(async (event) => {
+        const session = await getServerSession(event)
+        if (!session) {
+          return {
+            type: 'error',
+            error: new TRPCError({ message: 'unauthenticated', code: 'FORBIDDEN' }),
+          }
+        }
+        return {
+          type: 'ok',
+          data: {
+            status: 'authenticated',
+          },
+        }
+      })
+    }),
   getUsers: publicProcedure
     .query(async (req) => {
       const users = await req.ctx.prisma.user.findMany()
@@ -23,7 +41,7 @@ export const userRouter = router({
       id: z.string(),
       name: z.string(),
       email: z.string(),
-    }) satisfies z.Schema<User>)
+    }))
     .mutation(async (req) => {
       const user = await req.ctx.prisma.user.create({
         data: req.input,
