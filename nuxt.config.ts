@@ -6,9 +6,10 @@ export default defineNuxtConfig({
   modules: ['@sidebase/nuxt-auth'],
   runtimeConfig: {
     NUXT_SECRET: process.env.NUXT_SECRET,
-    NUXT_AUTH_ORIGIN: process.env.NUXT_AUTH_ORIGIN,
-    NUXT_GITHUB_CLIENT_ID: process.env.NUXT_GITHUB_CLIENT_ID,
-    NUXT_GITHUB_CLIENT_SECRET: process.env.NUXT_GITHUB_CLIENT_SECRET,
+    NUXT_AUTH0_ORIGIN: process.env.NUXT_AUTH0_ORIGIN,
+    NUXT_AUTH0_CLIENT_ID: process.env.NUXT_AUTH0_CLIENT_ID,
+    NUXT_AUTH0_CLIENT_SECRET: process.env.NUXT_AUTH0_CLIENT_SECRET,
+    NUXT_AUTH0_ISSUER: process.env.NUXT_AUTH0_ISSUER,
   },
   typescript: {
     strict: true,

@@ -14,7 +14,7 @@ const signUserOut = async () => {
 
 const signUserIn = async () => {
   const runtimeConfig = useRuntimeConfig()
-  await signIn('github', { callbackUrl: runtimeConfig.VITE_ORIGIN as string })
+  await signIn('auth0', { callbackUrl: runtimeConfig.NUXT_AUTH_ORIGIN as string })
 }
 </script>
 
