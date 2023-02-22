@@ -17,7 +17,7 @@ specifiers:
   tailwindcss: 3.2.7
   trpc-nuxt: 0.7.0
   ts-node-dev: ^2.0.0
-  ts-pattern: 4.2.0
+  ts-pattern: 4.2.1
   typescript: 4.9.5
   vue-tsc: 1.1.5
   zod: 3.20.6
@@ -28,7 +28,7 @@ dependencies:
   '@trpc/server': 10.12.0
   superjson: 1.12.2
   trpc-nuxt: 0.7.0_mu3c2tlkuj2nj57huhtbtyumm4
-  ts-pattern: 4.2.0
+  ts-pattern: 4.2.1
   zod: 3.20.6
 
 devDependencies:
@@ -7878,8 +7878,8 @@ packages:
       yn: 3.1.1
     dev: true
 
-  /ts-pattern/4.2.0:
-    resolution: {integrity: sha512-Bmi5G8KQyTnkcpRYzAwgPj8nvIodm2S7aneJtILrW0/2ZzqXQbl5nC5YjCiZUj5Iqihl8MLH+TK7pmCAZ61xJg==}
+  /ts-pattern/4.2.1:
+    resolution: {integrity: sha512-lXCmHZb01QOM9HdCLvisCGUH9ATdKPON9UaUvwe007gJAhuSBhRWIAIowys5QqNxEq6odWctfMIdI96vzjnOMQ==}
     dev: false
 
   /tsconfig-paths/3.14.1:
