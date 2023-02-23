@@ -29,7 +29,7 @@ const signUserIn = async () => {
       Log out
     </button>
     <div v-if="data">
-      <GithubUser :name="data.user?.name" :image="data.user?.image" :data="data" />
+      <GithubUser :name="data.user?.name" :image="data.user?.image" />
     </div>
   </NuxtLayout>
 </template>
