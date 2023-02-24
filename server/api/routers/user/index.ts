@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { TRPCError } from '@trpc/server'
-import { publicProcedure, router } from '../../trpc'
+import { protectedProcedure, publicProcedure, router } from '../../trpc'
 
 export const userRouter = router({
   getUsers: publicProcedure
@@ -41,4 +41,6 @@ export const userRouter = router({
         data: user,
       } as const
     }),
+  isAuthed: protectedProcedure
+    .query(() => { return 'you are authed!' }),
 })
