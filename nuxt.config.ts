@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     NUXT_AUTH0_CLIENT_ID: process.env.NUXT_AUTH0_CLIENT_ID,
     NUXT_AUTH0_CLIENT_SECRET: process.env.NUXT_AUTH0_CLIENT_SECRET,
     NUXT_AUTH0_ISSUER: process.env.NUXT_AUTH0_ISSUER,
+    NUXT_PROCESS_ENV: process.env.NODE_ENV,
   },
   typescript: {
     strict: true,
