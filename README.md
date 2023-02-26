@@ -9,6 +9,7 @@ A Vue, TRPC & Prisma stack, inspired by the T3 Stack. V3 includes:
 - Prisma
 - Zod
 - TRPC
+- Next-Auth
 
 
 ### Prerequisites
