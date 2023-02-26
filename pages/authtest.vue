@@ -3,7 +3,7 @@ const { $client } = useNuxtApp()
 const { data, error } = await $client.user.isAuthed.useQuery()
 
 if (!data.value && error.value) {
-  throw createError(
+  showError(
     {
       statusCode: error.value?.data?.httpStatus,
       statusMessage: error.value?.data?.code,
