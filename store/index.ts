@@ -3,26 +3,25 @@ import { match } from 'ts-pattern'
 
 export const store = () => {
   const { $client } = useNuxtApp()
-  const user = ref<User[]>([])
+  const users = ref<User[]>([])
 
   const getUsers = async () => {
     const { type, error, data } = await $client.user.getUsers.query()
 
-    user.value
-     = match(type)
-        .with(
-          'error',
-          () => { throw new Error(error?.message) },
-        )
-        .with(
-          'ok',
-          () => { return data! },
-        )
-        .exhaustive()
+    match(type)
+      .with(
+        'error',
+        () => { throw new Error(error?.message) },
+      )
+      .with(
+        'ok',
+        () => { users.value = data! },
+      )
+      .exhaustive()
   }
 
   return {
-    user,
+    users,
     getUsers,
   }
 }

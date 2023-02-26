@@ -1,8 +1,6 @@
 import { z } from 'zod'
-import type { User } from '@prisma/client'
 import { TRPCError } from '@trpc/server'
-import { publicProcedure, router } from '../../trpc'
-import type { ValidatePrisma } from '../../../utils/validatePrisma'
+import { protectedProcedure, publicProcedure, router } from '../../trpc'
 
 export const userRouter = router({
   getUsers: publicProcedure
@@ -24,11 +22,25 @@ export const userRouter = router({
       id: z.string(),
       name: z.string(),
       email: z.string(),
-    }) satisfies z.Schema<User>)
+    }))
     .mutation(async (req) => {
-      const user = req.ctx.prisma.user.create<ValidatePrisma<User>>({
+      const user = await req.ctx.prisma.user.create({
         data: req.input,
       })
-      return user
+      if (!user) {
+        return {
+          type: 'error',
+          error: new TRPCError({
+            message: 'failed to create a user',
+            code: 'INTERNAL_SERVER_ERROR',
+          }),
+        } as const
+      }
+      return {
+        type: 'ok',
+        data: user,
+      } as const
     }),
+  isAuthed: protectedProcedure
+    .query(() => { return 'you are authed!' }),
 })

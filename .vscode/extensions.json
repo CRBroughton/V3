@@ -1,15 +1,16 @@
 {
     "recommendations": [
-      "Vue.volar", 
+      "Vue.volar",
+      "Vue.vscode-typescript-vue-plugin",
       "dbaeumer.vscode-eslint", 
       "usernamehw.errorlens",
       "Prisma.prisma",
       "mhutchie.git-graph",
       "eamodio.gitlens",
-      "antfu.vite",
+      "vivaxy.vscode-conventional-commits",
       "vscode-icons-team.vscode-icons",
       "formulahendry.auto-rename-tag",
-      "ms-azuretools.vscode-docker",
-      "bradlc.vscode-tailwindcss"
+      "bradlc.vscode-tailwindcss",
+      "moalamri.inline-fold"
     ]
   }
