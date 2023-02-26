@@ -20,6 +20,9 @@ const t = initTRPC.context<Context>().create({
  **/
 export const publicProcedure = t.procedure
 
+/**
+ * Authentication middleware
+ **/
 const authMiddleware = t.middleware(({ ctx, next }) => {
   if (!ctx.session || !ctx.session.user)
     throw new TRPCError({ code: 'UNAUTHORIZED' })
