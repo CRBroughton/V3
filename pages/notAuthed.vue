@@ -1,15 +1,21 @@
 <script setup lang="ts">
 const { $client } = useNuxtApp()
+const { data, error } = await $client.user.isAuthed.useQuery()
 
-const checkIfAuthed = async () => {
-  return await $client.user.isAuthed.query()
+if (!data.value && error.value) {
+  throw createError(
+    {
+      statusCode: error.value?.data?.httpStatus,
+      statusMessage: error.value?.data?.code,
+    },
+  )
 }
-
-await checkIfAuthed()
 </script>
 
 <template>
-  <p>You're authed to see this page</p>
+  <p v-if="data">
+    {{ data }}
+  </p>
 </template>
 
 <style scoped>

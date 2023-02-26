@@ -28,7 +28,7 @@ const signUserIn = async () => {
     Log out
   </button>
 
-  <a href="/notAuthed">
+  <a href="/authtest">
     Test protected page
   </a>
   <div v-if="data">
