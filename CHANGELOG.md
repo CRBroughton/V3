@@ -1,5 +1,15 @@
 # v3
 
+## 0.2.1
+
+### Patch Changes
+
+- update trpc to 10.13.2
+- update nuxt to 3.2.3
+- update prisma to 4.11.0
+- fix auth origin in production
+- adjust error handling with nuxtErrorBoundary
+
 ## 0.2.0
 
 - update nuxt to 3.2.2
