@@ -43,7 +43,7 @@
     "@prisma/client": "4.11.0",
     "@trpc/client": "10.13.2",
     "@trpc/server": "10.13.2",
-    "next-auth": "4.19.2",
+    "next-auth": "4.20.0",
     "superjson": "1.12.2",
     "trpc-nuxt": "0.7.0",
     "ts-pattern": "4.2.1",

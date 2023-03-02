@@ -11,7 +11,7 @@ specifiers:
   '@types/node': 18.14.0
   autoprefixer: ^10.4.13
   eslint: 8.35.0
-  next-auth: 4.19.2
+  next-auth: 4.20.0
   npm-check: ^6.0.1
   nuxt: 3.2.3
   postcss: 8.4.21
@@ -26,11 +26,11 @@ specifiers:
   zod: 3.20.6
 
 dependencies:
-  '@next-auth/prisma-adapter': 1.0.5_4wli2wpnedw7ca6tsbjejo6e2i
+  '@next-auth/prisma-adapter': 1.0.5_jjek2djfmedp2ikjs4ednbfyk4
   '@prisma/client': 4.11.0_prisma@4.11.0
   '@trpc/client': 10.13.2_@trpc+server@10.13.2
   '@trpc/server': 10.13.2
-  next-auth: 4.19.2
+  next-auth: 4.20.0
   superjson: 1.12.2
   trpc-nuxt: 0.7.0_shvgydjpir3rxqrfppashwmjom
   ts-pattern: 4.2.1
@@ -39,7 +39,7 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config': 0.35.3_ycpbpc6yetojsgtrx3mwntkhsu
   '@changesets/cli': 2.26.0
-  '@sidebase/nuxt-auth': 0.4.2_next-auth@4.19.2
+  '@sidebase/nuxt-auth': 0.4.2_next-auth@4.20.0
   '@types/node': 18.14.0
   autoprefixer: 10.4.13_postcss@8.4.21
   eslint: 8.35.0
@@ -426,6 +426,13 @@ packages:
 
   /@babel/runtime/7.20.7:
     resolution: {integrity: sha512-UF0tvkUtxwAgZ5W/KrkHf0Rn0fdnLDU9ScxBrEVNUprE/MzirjK4MJUX1/BVDv00Sv8cljtukVK1aky++X1SjQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.13.11
+    dev: true
+
+  /@babel/runtime/7.21.0:
+    resolution: {integrity: sha512-xwII0//EObnq89Ji5AKYQaRYiW/nZ3llSv29d49IuxPhKbtJoLP+9QUUZ4nVragQVtaVGeZrpB+ZtG/Pdy/POw==}
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.11
@@ -1439,14 +1446,14 @@ packages:
       is-promise: 4.0.0
     dev: true
 
-  /@next-auth/prisma-adapter/1.0.5_4wli2wpnedw7ca6tsbjejo6e2i:
+  /@next-auth/prisma-adapter/1.0.5_jjek2djfmedp2ikjs4ednbfyk4:
     resolution: {integrity: sha512-VqMS11IxPXrPGXw6Oul6jcyS/n8GLOWzRMrPr3EMdtD6eOalM6zz05j08PcNiis8QzkfuYnCv49OvufTuaEwYQ==}
     peerDependencies:
       '@prisma/client': '>=2.26.0 || >=3'
       next-auth: ^4
     dependencies:
       '@prisma/client': 4.11.0_prisma@4.11.0
-      next-auth: 4.19.2
+      next-auth: 4.20.0
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:
@@ -2033,14 +2040,14 @@ packages:
       rollup: 3.17.3
     dev: true
 
-  /@sidebase/nuxt-auth/0.4.2_next-auth@4.19.2:
+  /@sidebase/nuxt-auth/0.4.2_next-auth@4.20.0:
     resolution: {integrity: sha512-lsHKIOukfxFOWF54/h0I2HujYoEQzGHWpHWb9yI84R7UPEvpONWAWoQ1ozWXnf1MDXQobsrJ5iTB22fI/xmxoQ==}
     peerDependencies:
       next-auth: ^4.18.8
     dependencies:
       '@nuxt/kit': 3.2.2
       defu: 6.1.2
-      next-auth: 4.19.2
+      next-auth: 4.20.0
       nitropack: 2.2.2
       requrl: 3.0.2
       ufo: 1.1.0
@@ -6243,8 +6250,8 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-auth/4.19.2:
-    resolution: {integrity: sha512-6V2YG3IJQVhgCAH7mvT3yopTW92gMdUrcwGX7NQ0dCreT/+axGua/JmVdarjec0C/oJukKpIYRgjMlV+L5ZQOQ==}
+  /next-auth/4.20.0:
+    resolution: {integrity: sha512-Ff8Otk76rkZd230GVlf6oyj6K6Hz3Y8A0xr3AmRX1bOPagUWhlb2TBtgmktQlHrPI6QoINfPiAgsAOKTax1z3A==}
     peerDependencies:
       next: ^12.2.5 || ^13
       nodemailer: ^6.6.5
@@ -6254,7 +6261,7 @@ packages:
       nodemailer:
         optional: true
     dependencies:
-      '@babel/runtime': 7.20.7
+      '@babel/runtime': 7.21.0
       '@panva/hkdf': 1.0.4
       cookie: 0.5.0
       jose: 4.12.0
