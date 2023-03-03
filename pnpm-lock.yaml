@@ -11,7 +11,7 @@ specifiers:
   '@types/node': 18.14.0
   autoprefixer: ^10.4.13
   eslint: 8.35.0
-  next-auth: 4.20.0
+  next-auth: 4.20.1
   npm-check: ^6.0.1
   nuxt: 3.2.3
   postcss: 8.4.21
@@ -26,11 +26,11 @@ specifiers:
   zod: 3.20.6
 
 dependencies:
-  '@next-auth/prisma-adapter': 1.0.5_jjek2djfmedp2ikjs4ednbfyk4
+  '@next-auth/prisma-adapter': 1.0.5_knaw3qxw4zwoiwojd3fn43zthi
   '@prisma/client': 4.11.0_prisma@4.11.0
   '@trpc/client': 10.13.2_@trpc+server@10.13.2
   '@trpc/server': 10.13.2
-  next-auth: 4.20.0
+  next-auth: 4.20.1
   superjson: 1.12.2
   trpc-nuxt: 0.7.0_shvgydjpir3rxqrfppashwmjom
   ts-pattern: 4.2.1
@@ -39,7 +39,7 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config': 0.35.3_ycpbpc6yetojsgtrx3mwntkhsu
   '@changesets/cli': 2.26.0
-  '@sidebase/nuxt-auth': 0.4.2_next-auth@4.20.0
+  '@sidebase/nuxt-auth': 0.4.2_next-auth@4.20.1
   '@types/node': 18.14.0
   autoprefixer: 10.4.13_postcss@8.4.21
   eslint: 8.35.0
@@ -1446,14 +1446,14 @@ packages:
       is-promise: 4.0.0
     dev: true
 
-  /@next-auth/prisma-adapter/1.0.5_jjek2djfmedp2ikjs4ednbfyk4:
+  /@next-auth/prisma-adapter/1.0.5_knaw3qxw4zwoiwojd3fn43zthi:
     resolution: {integrity: sha512-VqMS11IxPXrPGXw6Oul6jcyS/n8GLOWzRMrPr3EMdtD6eOalM6zz05j08PcNiis8QzkfuYnCv49OvufTuaEwYQ==}
     peerDependencies:
       '@prisma/client': '>=2.26.0 || >=3'
       next-auth: ^4
     dependencies:
       '@prisma/client': 4.11.0_prisma@4.11.0
-      next-auth: 4.20.0
+      next-auth: 4.20.1
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:
@@ -2040,14 +2040,14 @@ packages:
       rollup: 3.17.3
     dev: true
 
-  /@sidebase/nuxt-auth/0.4.2_next-auth@4.20.0:
+  /@sidebase/nuxt-auth/0.4.2_next-auth@4.20.1:
     resolution: {integrity: sha512-lsHKIOukfxFOWF54/h0I2HujYoEQzGHWpHWb9yI84R7UPEvpONWAWoQ1ozWXnf1MDXQobsrJ5iTB22fI/xmxoQ==}
     peerDependencies:
       next-auth: ^4.18.8
     dependencies:
       '@nuxt/kit': 3.2.2
       defu: 6.1.2
-      next-auth: 4.20.0
+      next-auth: 4.20.1
       nitropack: 2.2.2
       requrl: 3.0.2
       ufo: 1.1.0
@@ -6250,8 +6250,8 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-auth/4.20.0:
-    resolution: {integrity: sha512-Ff8Otk76rkZd230GVlf6oyj6K6Hz3Y8A0xr3AmRX1bOPagUWhlb2TBtgmktQlHrPI6QoINfPiAgsAOKTax1z3A==}
+  /next-auth/4.20.1:
+    resolution: {integrity: sha512-ZcTUN4qzzZ/zJYgOW0hMXccpheWtAol8QOMdMts+LYRcsPGsqf2hEityyaKyECQVw1cWInb9dF3wYwI5GZdEmQ==}
     peerDependencies:
       next: ^12.2.5 || ^13
       nodemailer: ^6.6.5
