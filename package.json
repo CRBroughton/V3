@@ -41,8 +41,8 @@
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.5",
     "@prisma/client": "4.11.0",
-    "@trpc/client": "10.14.0",
-    "@trpc/server": "10.14.0",
+    "@trpc/client": "10.14.1",
+    "@trpc/server": "10.14.1",
     "next-auth": "4.20.1",
     "superjson": "1.12.2",
     "trpc-nuxt": "0.7.0",
