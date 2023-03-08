@@ -17,7 +17,9 @@
     "changeset": "npx changeset",
     "changeset:status": "npx changeset status --verbose",
     "changeset:version": "npx changeset version",
-    "check": "NPM_CHECK_INSTALLER=pnpm npm-check -u"
+    "check": "NPM_CHECK_INSTALLER=pnpm npm-check -u",
+    "test": "pnpm prisma:db:push --force-reset && npx prisma db seed && vitest",
+    "test:watch": "pnpm prisma:db:push --force-reset && npx prisma db seed && vitest --watch"
   },
   "prisma": {
     "seed": "ts-node-dev -P tsconfig.server.json prisma/seed.ts"
@@ -25,6 +27,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "0.36.0",
     "@changesets/cli": "^2.26.0",
+    "@nuxt/test-utils": "^3.2.3",
     "@sidebase/nuxt-auth": "^0.4.3",
     "@types/node": "18.14.2",
     "autoprefixer": "^10.4.13",
@@ -36,6 +39,7 @@
     "tailwindcss": "3.2.7",
     "ts-node-dev": "^2.0.0",
     "typescript": "4.9.5",
+    "vitest": "^0.29.2",
     "vue-tsc": "1.2.0"
   },
   "dependencies": {

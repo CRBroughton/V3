@@ -8,14 +8,13 @@ const userData: Prisma.UserCreateInput[] = [
     id: '97527cbe-2de0-40cd-a953-8caae780e66e',
     email: 'craig.broughton@email.com',
     name: 'Craig Broughton',
-    tasks: {
-      create: [
-        {
-          title: 'My First Task',
-          description: 'Test',
-          id: '1',
-        },
-      ],
+    image: '',
+    accounts: {
+      create: {
+        provider: 'Google',
+        type: 'Auth',
+        providerAccountId: '1234',
+      },
     },
   },
 ]
