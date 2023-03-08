@@ -26,6 +26,13 @@ describe('User Procedure Tests', async () => {
   test('Auth Procedure - Verifies a logged in user', async () => {
     const response = await testProtectedProcedures().user.isAuthed()
 
-    expect(response).toEqual('you are authed!')
+    type AuthResponse = inferProcedureOutput<AppRouter['user']['isAuthed']>
+
+    const expectation: AuthResponse = {
+      type: 'ok',
+      data: 'you are authed!',
+    }
+
+    expect(response).toEqual(expectation)
   })
 })
