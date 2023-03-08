@@ -18,8 +18,12 @@
     "changeset:status": "npx changeset status --verbose",
     "changeset:version": "npx changeset version",
     "check": "NPM_CHECK_INSTALLER=pnpm npm-check -u",
-    "test": "pnpm prisma:db:push --force-reset && npx prisma db seed && vitest",
-    "test:watch": "pnpm prisma:db:push --force-reset && npx prisma db seed && vitest --watch"
+    "test:prepare": "pnpm prisma:db:push --force-reset && npx prisma db seed",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:server": "vitest --dir tests/server",
+    "test:components": "vitest --dir tests/components",
+    "test:ui": "vitest --ui"
   },
   "prisma": {
     "seed": "ts-node-dev -P tsconfig.server.json prisma/seed.ts"
@@ -30,8 +34,12 @@
     "@nuxt/test-utils": "^3.2.3",
     "@sidebase/nuxt-auth": "^0.4.3",
     "@types/node": "18.14.2",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitest/ui": "^0.29.2",
+    "@vue/test-utils": "^2.3.0",
     "autoprefixer": "^10.4.13",
     "eslint": "8.35.0",
+    "jsdom": "^21.1.0",
     "npm-check": "^6.0.1",
     "nuxt": "3.2.3",
     "postcss": "8.4.21",
