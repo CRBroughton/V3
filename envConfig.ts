@@ -1,7 +1,7 @@
 import { z } from 'zod'
 
 const envSchema = z.object({
-  NODE_ENV: z.enum(['development', 'production']).default('development'),
+  NODE_ENV: z.enum(['development', 'production', 'test']).default('development'),
   VITE_TRPC_URL: z.string().url().default('http://localhost:5000/trpc'),
   DATABASE_URL: z.string().nonempty(),
   DATABASE_NAME: z.string().nonempty(),
