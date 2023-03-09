@@ -37,7 +37,7 @@
     "@types/node": "18.14.2",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitest/ui": "^0.29.2",
-    "@vue/test-utils": "^2.3.0",
+    "@vue/test-utils": "^2.3.1",
     "autoprefixer": "^10.4.13",
     "eslint": "8.35.0",
     "jsdom": "^21.1.0",
