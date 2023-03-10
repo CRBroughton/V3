@@ -8,6 +8,7 @@
     "check": "NPM_CHECK_INSTALLER=pnpm npm-check -u",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "analyze": "npx nuxi analyze",
     "postinstall": "nuxt prepare",
     "prisma:generate": "npx prisma generate",
     "prisma:db:push": "npx prisma db push",
@@ -21,10 +22,10 @@
     "changeset:version": "npx changeset version",
     "test:prepare": "pnpm prisma:db:push --force-reset && npx prisma db seed",
     "test": "vitest",
+    "test:ui": "vitest --ui",
     "test:watch": "vitest --watch",
     "test:server": "vitest --dir tests/server",
-    "test:components": "vitest --dir tests/components",
-    "test:ui": "vitest --ui"
+    "test:components": "vitest --dir tests/components"
   },
   "prisma": {
     "seed": "ts-node-dev -P tsconfig.server.json prisma/seed.ts"
