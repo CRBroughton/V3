@@ -35,7 +35,7 @@
     "@nuxt/devtools": "^0.2.5",
     "@nuxt/test-utils": "^3.2.3",
     "@sidebase/nuxt-auth": "^0.4.3",
-    "@types/node": "18.14.2",
+    "@types/node": "18.15.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitest/ui": "^0.29.2",
     "@vue/test-utils": "^2.3.1",
