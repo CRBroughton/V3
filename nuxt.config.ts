@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  experimental: {
+    componentIslands: false,
+  },
   auth: {
     origin: process.env.AUTH_ORIGIN,
   },
