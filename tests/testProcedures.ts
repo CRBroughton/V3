@@ -1,16 +1,15 @@
 import type { Session } from 'next-auth'
-import { uuidGenerator } from '~~/prisma/UUIDGenerator'
 import { appRouter } from '~~/server/api/router'
 import UserBuilder from '~~/server/builders/UserBuilder'
 import { prisma } from '~~/server/prisma'
 
-const sessionUser = new UserBuilder()
-  .setID(uuidGenerator())
-  .setName('Craig Broughton')
-  .setEmail('craig.broughton@email.com')
-  .build()
-
 export const testProtectedProcedures = () => {
+  const { user: sessionUser, setUserID, setUserName, setUserEmail } = UserBuilder()
+
+  setUserID('97527cbe-2de0-40cd-a953-8caae780e66e')
+  setUserName('Craig Broughton')
+  setUserEmail('craig.broughton@email.com')
+
   return appRouter.createCaller({
     prisma,
     session: {
