@@ -11,7 +11,7 @@ specifiers:
   '@trpc/client': 10.16.0
   '@trpc/server': 10.16.0
   '@types/node': 18.15.0
-  '@vitejs/plugin-vue': ^4.0.0
+  '@vitejs/plugin-vue': ^4.1.0
   '@vitest/ui': ^0.29.3
   '@vue/test-utils': ^2.3.1
   autoprefixer: ^10.4.14
@@ -50,7 +50,7 @@ devDependencies:
   '@nuxt/test-utils': 3.3.1
   '@sidebase/nuxt-auth': 0.4.4_next-auth@4.20.1
   '@types/node': 18.15.0
-  '@vitejs/plugin-vue': 4.0.0
+  '@vitejs/plugin-vue': 4.1.0
   '@vitest/ui': 0.29.3
   '@vue/test-utils': 2.3.1
   autoprefixer: 10.4.14_postcss@8.4.21
@@ -2201,7 +2201,7 @@ packages:
     dependencies:
       '@nuxt/kit': 3.3.1_rollup@3.19.1
       '@rollup/plugin-replace': 5.0.2_rollup@3.19.1
-      '@vitejs/plugin-vue': 4.0.0_vite@4.1.4+vue@3.2.47
+      '@vitejs/plugin-vue': 4.1.0_vite@4.1.4+vue@3.2.47
       '@vitejs/plugin-vue-jsx': 3.0.0_vite@4.1.4+vue@3.2.47
       autoprefixer: 10.4.14_postcss@8.4.21
       chokidar: 3.5.3
@@ -2845,16 +2845,16 @@ packages:
       - supports-color
     dev: true
 
-  /@vitejs/plugin-vue/4.0.0:
-    resolution: {integrity: sha512-e0X4jErIxAB5oLtDqbHvHpJe/uWNkdpYV83AOG2xo2tEVSzCzewgJMtREZM30wXnM5ls90hxiOtAuVU6H5JgbA==}
+  /@vitejs/plugin-vue/4.1.0:
+    resolution: {integrity: sha512-++9JOAFdcXI3lyer9UKUV4rfoQ3T1RN8yDqoCLar86s0xQct5yblxAE+yWgRnU5/0FOlVCpTZpYSBV/bGWrSrQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.0.0
       vue: ^3.2.25
     dev: true
 
-  /@vitejs/plugin-vue/4.0.0_vite@4.1.4+vue@3.2.47:
-    resolution: {integrity: sha512-e0X4jErIxAB5oLtDqbHvHpJe/uWNkdpYV83AOG2xo2tEVSzCzewgJMtREZM30wXnM5ls90hxiOtAuVU6H5JgbA==}
+  /@vitejs/plugin-vue/4.1.0_vite@4.1.4+vue@3.2.47:
+    resolution: {integrity: sha512-++9JOAFdcXI3lyer9UKUV4rfoQ3T1RN8yDqoCLar86s0xQct5yblxAE+yWgRnU5/0FOlVCpTZpYSBV/bGWrSrQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.0.0
