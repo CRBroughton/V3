@@ -17,5 +17,21 @@
     "css.lint.unknownAtRules": "ignore",
     "scss.lint.unknownAtRules": "ignore",
     "typescript.inlayHints.parameterNames.enabled": "all",
-    "typescript.tsdk": "node_modules/typescript/lib"
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "files.exclude": {
+        // Hide all dot-folders and dot-files
+        // "**/.*": true,
+        // Hide the node_modules folder
+        // "**/node_modules": true,
+        // Hide all configuration files
+        // "envConfig.ts": true,
+        // ".env.example": true,
+        // "*.config.*": true,
+        // ".gitignore": true,
+        // ".eslintrc": true,
+        // ".npmrc": true,
+        // "*.json": true,
+        // "*.yaml": true,
+        // "*.yml": true,
+    }
 }
