@@ -1,18 +1,11 @@
 import { describe, expect, test } from 'vitest'
 import type { inferProcedureOutput } from '@trpc/server'
 import type { AppRouter } from '~~/server/api/router'
-import UserBuilder from '~~/server/builders/UserBuilder'
-import { testProtectedProcedures, testPublicProcedures } from '~~/tests/testProcedures'
+import { testProtectedProcedures, testPublicProcedures, testUser } from '~~/tests/testProcedures'
 
 describe('User Procedure Tests', async () => {
   test('getUsers Procedure - Returns a list of registered users', async () => {
     const response = await testPublicProcedures().user.getUsers()
-
-    const { user: testUser, setUserID, setUserName, setUserEmail } = UserBuilder()
-
-    setUserID('97527cbe-2de0-40cd-a953-8caae780e66e')
-    setUserName('Craig Broughton')
-    setUserEmail('craig.broughton@email.com')
 
     type UserResponse = inferProcedureOutput<AppRouter['user']['getUsers']>
 
