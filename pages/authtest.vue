@@ -5,7 +5,7 @@ const { data, error } = await $client.user.isAuthed.useQuery()
 
 <template>
   <p v-if="data">
-    {{ data }}
+    {{ data.data }}
   </p>
   <NuxtErrorBoundary>
     <div v-if="error">

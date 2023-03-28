@@ -7,8 +7,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: V3_deploy
     steps:
       - uses: actions/checkout@v3
+      - name: Make envfile
+        run: |
+          touch .env
+          echo DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD }} >> .env
+          echo NUXT_AUTH0_CLIENT_ID=${{ secrets.NUXT_AUTH0_CLIENT_ID }} >> .env
+          echo NUXT_AUTH0_CLIENT_SECRET=${{ secrets.NUXT_AUTH0_CLIENT_SECRET }} >> .env
+          echo NUXT_SECRET=${{ secrets.NUXT_SECRET }} >> .env
+          echo AUTH_ORIGIN=${{ vars.AUTH_ORIGIN }} >> .env
+          echo DATABASE_NAME=${{ vars.DATABASE_NAME }} >> .env
+          echo DATABASE_URL=${{ vars.DATABASE_URL }} >> .env
+          echo DATABASE_USER=${{ vars.DATABASE_USER }} >> .env
+          echo NUXT_AUTH0_ISSUER=${{ vars.NUXT_AUTH0_ISSUER }} >> .env
       - uses: pnpm/action-setup@v2
         with:
           version: 7
@@ -18,4 +31,7 @@ jobs:
           cache: "pnpm"
       
       - run: pnpm i --frozen-lockfile
+      - run: pnpm run prisma:generate
+      - run: pnpm run test:prepare
+      - run: pnpm run test
       - run: pnpm run build

@@ -42,5 +42,10 @@ export const userRouter = router({
       } as const
     }),
   isAuthed: protectedProcedure
-    .query(() => { return 'you are authed!' }),
+    .query(() => {
+      return {
+        type: 'ok',
+        data: 'you are authed!',
+      } as const
+    }),
 })

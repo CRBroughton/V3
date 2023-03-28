@@ -21,8 +21,10 @@ V3 comes with some pre-defined commands for development:
 
 - build - Builds the application
 - dev - Generates Prisma types and starts the development server
+- check - Check for dependency upgrades
 - generate - Runs Nuxts type generation (this is usually done automatically for you)
 - preview - Runs a preview server of your application
+- analyze - Analyze server and client bundle statistics
 - postinstall - Nuxts postinstall script (again, usually done automatically)
 - prisma:generate - Generates Prisma Typescript types
 - prisma:db:push - Push your current Prisma schema to your connected database
@@ -33,7 +35,12 @@ V3 comes with some pre-defined commands for development:
 - changeset - Create a new changeset
 - changeset:status - See the current status of your changesets
 - changeset:version - Version your application based on current changesets
-- check - Check for dependency upgrades
+- test:prepare - Resets and seeds the database in preparation for testing
+- test - Run all tests
+- test:ui - Run the interactive test viewer
+- test:watch - Watch modified test and run them
+- test:server - Run all server tests
+- test:component Run all component tests
 
 To run any of these commands, use `pnpm run COMMAND_NAME` or use the included VSCode npm script window.
 
