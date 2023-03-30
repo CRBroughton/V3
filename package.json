@@ -31,7 +31,7 @@
     "seed": "ts-node-dev -P tsconfig.server.json prisma/seed.ts"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "0.37.0",
+    "@antfu/eslint-config": "0.38.2",
     "@changesets/cli": "^2.26.1",
     "@nuxt/devtools": "^0.3.1",
     "@nuxt/test-utils": "^3.3.2",
@@ -41,7 +41,7 @@
     "@vitest/ui": "^0.29.8",
     "@vue/test-utils": "^2.3.2",
     "autoprefixer": "^10.4.14",
-    "eslint": "8.36.0",
+    "eslint": "8.37.0",
     "jsdom": "^21.1.1",
     "npm-check": "^6.0.1",
     "nuxt": "3.3.2",
