@@ -23,7 +23,7 @@ specifiers:
   postcss: 8.4.21
   prisma: 4.12.0
   superjson: 1.12.2
-  tailwindcss: 3.3.0
+  tailwindcss: 3.3.1
   trpc-nuxt: 0.8.0
   ts-node-dev: ^2.0.0
   ts-pattern: 4.2.2
@@ -60,7 +60,7 @@ devDependencies:
   nuxt: 3.3.2_bhbcqlqzxslug4j23t555kwsj4
   postcss: 8.4.21
   prisma: 4.12.0
-  tailwindcss: 3.3.0_postcss@8.4.21
+  tailwindcss: 3.3.1_postcss@8.4.21
   ts-node-dev: 2.0.0_lwgqdwokjtwlohdqtbb6s252kq
   typescript: 4.9.5
   vitest: 0.29.8_o37wuudx5bfh5vekeovdm6towm
@@ -10246,8 +10246,8 @@ packages:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
     dev: true
 
-  /tailwindcss/3.3.0_postcss@8.4.21:
-    resolution: {integrity: sha512-hOXlFx+YcklJ8kXiCAfk/FMyr4Pm9ck477G0m/us2344Vuj355IpoEDB5UmGAsSpTBmr+4ZhjzW04JuFXkb/fw==}
+  /tailwindcss/3.3.1_postcss@8.4.21:
+    resolution: {integrity: sha512-Vkiouc41d4CEq0ujXl6oiGFQ7bA3WEhUZdTgXAhtKxSy49OmKs8rEfQmupsfF0IGW8fv2iQkp1EVUuapCFrZ9g==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
