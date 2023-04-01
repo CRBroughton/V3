@@ -18,7 +18,7 @@ export const testUser: User = {
   image: '',
 }
 
-export const testProtectedProcedures = () => {
+export function testProtectedProcedures() {
   return appRouter.createCaller({
     prisma,
     session: {
@@ -28,6 +28,6 @@ export const testProtectedProcedures = () => {
   })
 }
 
-export const testPublicProcedures = () => {
+export function testPublicProcedures() {
   return appRouter.createCaller({ prisma, session: {} as Session })
 }
