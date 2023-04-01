@@ -29,8 +29,8 @@ V3 comes with some pre-defined commands for development:
 - prisma:generate - Generates Prisma Typescript types
 - prisma:db:push - Push your current Prisma schema to your connected database
 - prisma:db:pull - Pull your current database models into your Prisma schema (introspection)
-- primsa:migrate - Creates a new migration file
-- primsa:studio - Opens the Prisma database viewer
+- prisma:migrate - Creates a new migration file
+- prisma:studio - Opens the Prisma database viewer
 - prisma:seed - Runs your connected seeders (see package.json)
 - changeset - Create a new changeset
 - changeset:status - See the current status of your changesets
