@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils'
 
 import Packages from '../../components/Packages.vue'
 
-const bootstrap = () => {
+function bootstrap() {
   return mount(Packages, {})
 }
 

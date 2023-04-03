@@ -8,7 +8,7 @@ interface Props {
   image?: string | null
 }
 
-const bootstrap = (props?: Props) => {
+function bootstrap(props?: Props) {
   return mount(GithubUser, {
     props: { ...props },
   })

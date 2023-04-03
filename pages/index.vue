@@ -8,11 +8,11 @@ onMounted(async () => {
   await getUsers()
 })
 
-const signUserOut = async () => {
+async function signUserOut() {
   await signOut()
 }
 
-const signUserIn = async () => {
+async function signUserIn() {
   const runtimeConfig = useRuntimeConfig()
   await signIn('auth0', { callbackUrl: runtimeConfig.NUXT_AUTH_ORIGIN as string })
 }

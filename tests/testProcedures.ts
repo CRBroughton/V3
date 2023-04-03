@@ -1,6 +1,6 @@
 import type { Session } from 'next-auth'
+import prisma from './mocks'
 import { appRouter } from '~~/server/api/router'
-import { prisma } from '~~/server/prisma'
 
 interface User {
   id: string
@@ -18,7 +18,7 @@ export const testUser: User = {
   image: '',
 }
 
-export const testProtectedProcedures = () => {
+export function testProtectedProcedures() {
   return appRouter.createCaller({
     prisma,
     session: {
@@ -28,6 +28,6 @@ export const testProtectedProcedures = () => {
   })
 }
 
-export const testPublicProcedures = () => {
+export function testPublicProcedures() {
   return appRouter.createCaller({ prisma, session: {} as Session })
 }

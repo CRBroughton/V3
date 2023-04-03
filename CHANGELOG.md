@@ -1,5 +1,17 @@
 # v3
 
+## 0.3.0
+
+### General changes
+
+- update @nuxt/test-utils to 3.3.3
+- update @antfu/eslint-config to 0.38.3
+- update nuxt to 3.3.3
+- swap tailwindcss for nuxt module
+- update next-auth to 4.21.1
+- update eslint to 8.37.0
+- add vitest-mock-extended
+
 ## 0.2.2
 
 ### General changes
@@ -8,7 +20,6 @@
 
 V3 now support a type-safe env configuration; You can use the `envConfig.ts` file to
 configure this feature. Please note that for use in production, this will also take effect.
-
 
 #### Testing
 

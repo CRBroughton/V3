@@ -1,4 +1,4 @@
-# V3
+<img src="./assets/logo.png" width="659">
 
 A Vue, TRPC & Prisma stack, inspired by the T3 Stack. V3 includes:
 
@@ -12,11 +12,15 @@ A Vue, TRPC & Prisma stack, inspired by the T3 Stack. V3 includes:
 - Next-Auth
 
 
-### Prerequisites
+## Prerequisites
 
-Before using this template, ensure you have node, npm and pnpm installed. pnpm is used for installing and updating packages.
+- node 18.X
+- npm
+- pnpm
 
-### Installation & Getting Started
+pnpm is used for installing and updating packages.
+
+## Installation & Getting Started
 
 Installs dependencies & generate Prisma types
 
@@ -26,7 +30,7 @@ Generate your first migration:
 
 ```pnpm run prisma:migrate```
 
-Seeds the Db
+Seeds the DB
 
 ```pnpm run prisma:seed```
 
@@ -36,3 +40,4 @@ Now run the below command to start the sevrer:
 
 
 Read the docs/GUIDE.md for more information.
+

@@ -1,7 +1,7 @@
 import type { User } from '@prisma/client'
 import { match } from 'ts-pattern'
 
-export const store = () => {
+export function store() {
   const { $client } = useNuxtApp()
   const users = ref<User[]>([])
 
