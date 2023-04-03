@@ -5,7 +5,7 @@ specifiers:
   '@changesets/cli': ^2.26.1
   '@next-auth/prisma-adapter': ^1.0.5
   '@nuxt/devtools': ^0.3.1
-  '@nuxt/test-utils': ^3.3.2
+  '@nuxt/test-utils': ^3.3.3
   '@nuxtjs/tailwindcss': ^6.6.5
   '@prisma/client': 4.12.0
   '@sidebase/nuxt-auth': ^0.4.4
@@ -47,7 +47,7 @@ devDependencies:
   '@antfu/eslint-config': 0.38.2_ip5up2nocltd47wbnuyybe5dxu
   '@changesets/cli': 2.26.1
   '@nuxt/devtools': 0.3.1_nuxt@3.3.3
-  '@nuxt/test-utils': 3.3.2
+  '@nuxt/test-utils': 3.3.3
   '@nuxtjs/tailwindcss': 6.6.5
   '@sidebase/nuxt-auth': 0.4.4_next-auth@4.20.1
   '@types/node': 18.15.0
@@ -2357,14 +2357,14 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/test-utils/3.3.2:
-    resolution: {integrity: sha512-ai6GE90y7d2bL1TxgI9WgNXZWPHEhS5UZQjP89kA+elCDePzZ6iJzkDaH4fdK2Dz0yHtiRsj4YDE4HjQ3EABug==}
+  /@nuxt/test-utils/3.3.3:
+    resolution: {integrity: sha512-uZSRVWGZditPc7hfEtntV/42UxhOE1yuOyXrikpEkDDId2m1+yHg7hiBfjXMzZpiKH5hvjQa/gvO1Qj2Ni5TMw==}
     engines: {node: ^14.18.0 || ^16.10.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
     peerDependencies:
       vue: ^3.2.47
     dependencies:
-      '@nuxt/kit': 3.3.2
-      '@nuxt/schema': 3.3.2
+      '@nuxt/kit': 3.3.3
+      '@nuxt/schema': 3.3.3
       consola: 2.15.3
       defu: 6.1.2
       execa: 7.1.1
