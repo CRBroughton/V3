@@ -1,6 +1,6 @@
 import type { Session } from 'next-auth'
+import prisma from './mocks'
 import { appRouter } from '~~/server/api/router'
-import { prisma } from '~~/server/prisma'
 
 interface User {
   id: string
