@@ -29,6 +29,7 @@ specifiers:
   ts-pattern: 4.2.2
   typescript: 4.9.5
   vitest: ^0.29.8
+  vitest-mock-extended: ^1.1.3
   vue-tsc: 1.2.0
   zod: 3.21.4
 
@@ -64,6 +65,7 @@ devDependencies:
   ts-node-dev: 2.0.0_lwgqdwokjtwlohdqtbb6s252kq
   typescript: 4.9.5
   vitest: 0.29.8_o37wuudx5bfh5vekeovdm6towm
+  vitest-mock-extended: 1.1.3_sgv4ketavbj4hjxcuyltuivqua
   vue-tsc: 1.2.0_typescript@4.9.5
 
 packages:
@@ -10980,6 +10982,14 @@ packages:
       ufo: 1.1.1
     dev: false
 
+  /ts-essentials/9.3.1_typescript@4.9.5:
+    resolution: {integrity: sha512-9CChSvQMyVRo29Vb1A2jbs+LKo3d/bAf+ndSaX0T8cEiy/HChVaRN/HY5DqUryZ8hZ6uol9bEgCnGmnDbwBR9Q==}
+    peerDependencies:
+      typescript: '>=4.1.0'
+    dependencies:
+      typescript: 4.9.5
+    dev: true
+
   /ts-interface-checker/0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
@@ -11729,6 +11739,17 @@ packages:
       rollup: 3.20.2
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /vitest-mock-extended/1.1.3_sgv4ketavbj4hjxcuyltuivqua:
+    resolution: {integrity: sha512-MiaKYZbTg+fjozKnCpoTTva0BnlSNYyk4jiPuM2xVhg4aou112QIrALdH3/ZKK6qfXWh0A17gFIjWJjylOlXxg==}
+    peerDependencies:
+      typescript: 3.x || 4.x || 5.x
+      vitest: '>=0.29.2'
+    dependencies:
+      ts-essentials: 9.3.1_typescript@4.9.5
+      typescript: 4.9.5
+      vitest: 0.29.8_o37wuudx5bfh5vekeovdm6towm
     dev: true
 
   /vitest/0.29.8_o37wuudx5bfh5vekeovdm6towm:
