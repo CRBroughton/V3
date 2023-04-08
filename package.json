@@ -20,7 +20,6 @@
     "changeset": "npx changeset",
     "changeset:status": "npx changeset status --verbose",
     "changeset:version": "npx changeset version",
-    "test:prepare": "pnpm prisma:db:push --force-reset && npx prisma db seed",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:watch": "vitest --watch",
