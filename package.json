@@ -34,7 +34,7 @@
     "@changesets/cli": "^2.26.1",
     "@nuxt/devtools": "^0.3.2",
     "@nuxt/test-utils": "^3.3.3",
-    "@nuxtjs/tailwindcss": "^6.6.5",
+    "@nuxtjs/tailwindcss": "^6.6.6",
     "@sidebase/nuxt-auth": "^0.4.4",
     "@types/node": "18.15.0",
     "@vitejs/plugin-vue": "^4.1.0",
