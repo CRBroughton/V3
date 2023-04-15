@@ -9,8 +9,8 @@ specifiers:
   '@nuxtjs/tailwindcss': ^6.6.6
   '@prisma/client': 4.12.0
   '@sidebase/nuxt-auth': ^0.4.4
-  '@trpc/client': 10.19.1
-  '@trpc/server': 10.19.1
+  '@trpc/client': 10.20.0
+  '@trpc/server': 10.20.0
   '@types/node': 18.15.0
   '@vitejs/plugin-vue': ^4.1.0
   '@vitest/ui': ^0.30.1
@@ -36,11 +36,11 @@ specifiers:
 dependencies:
   '@next-auth/prisma-adapter': 1.0.5_olz4gynuwklrt45ffo7wirvoly
   '@prisma/client': 4.12.0_prisma@4.12.0
-  '@trpc/client': 10.19.1_@trpc+server@10.19.1
-  '@trpc/server': 10.19.1
+  '@trpc/client': 10.20.0_@trpc+server@10.20.0
+  '@trpc/server': 10.20.0
   next-auth: 4.21.1
   superjson: 1.12.2
-  trpc-nuxt: 0.9.0_tnhouhjb5xsc7qdeu7h3fqydiq
+  trpc-nuxt: 0.9.0_6h4t7n6ksrv4hagmtgl2yasteu
   ts-pattern: 4.2.2
   zod: 3.21.4
 
@@ -2864,16 +2864,16 @@ packages:
     engines: {node: '>= 10'}
     dev: true
 
-  /@trpc/client/10.19.1_@trpc+server@10.19.1:
-    resolution: {integrity: sha512-H61dIgoAjiA7/SfuHlUAsqshhaxOSSRFyEfaoBwYvXzLyno+fvQRUXvxpsC4A8IsDuNX2pxiggAK8AwTNKqIzg==}
+  /@trpc/client/10.20.0_@trpc+server@10.20.0:
+    resolution: {integrity: sha512-DER42PjIURSl1fwVnBzMWMgo4oxbyA72nIVpOliIpNArDYkZkr7kMfXmap2J7gwaKJNMC/V5xhYc06zG9r/8pQ==}
     peerDependencies:
-      '@trpc/server': 10.19.1
+      '@trpc/server': 10.20.0
     dependencies:
-      '@trpc/server': 10.19.1
+      '@trpc/server': 10.20.0
     dev: false
 
-  /@trpc/server/10.19.1:
-    resolution: {integrity: sha512-LAa8BQhMYJL+GU28cigOPKlEogCEBeff1wIKflnUj34ou1ythwTboe7Mi6rjDW3Q9EasP7s9YmqRv9Fkp8fL4Q==}
+  /@trpc/server/10.20.0:
+    resolution: {integrity: sha512-pbrdgw2mO8lWygyZjGLbOq/EoWFWEJvLaxp8JmGsivMIh/IZR5mksPJdywAGQ4TBrbcqssKhuoJ/8OE9mhaveg==}
     dev: false
 
   /@trysound/sax/0.2.0:
@@ -11109,15 +11109,15 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /trpc-nuxt/0.9.0_tnhouhjb5xsc7qdeu7h3fqydiq:
+  /trpc-nuxt/0.9.0_6h4t7n6ksrv4hagmtgl2yasteu:
     resolution: {integrity: sha512-915RIy0CMqyTfkwnKDv+y7FMgBcTFJr//eM/6rbX7SR3OmAdmwDcMQjrpYS5430pfKkd7/ANdlMeIU3+sZr43Q==}
     engines: {node: ^16.13.0 || ^18.12.0}
     peerDependencies:
       '@trpc/client': ^10.20.0
       '@trpc/server': ^10.20.0
     dependencies:
-      '@trpc/client': 10.19.1_@trpc+server@10.19.1
-      '@trpc/server': 10.19.1
+      '@trpc/client': 10.20.0_@trpc+server@10.20.0
+      '@trpc/server': 10.20.0
       h3: 1.6.4
       ofetch: 1.0.1
       ohash: 1.0.0
