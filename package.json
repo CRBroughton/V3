@@ -55,7 +55,7 @@
     "vue-tsc": "1.2.0"
   },
   "dependencies": {
-    "@next-auth/prisma-adapter": "^1.0.5",
+    "@next-auth/prisma-adapter": "^1.0.6",
     "@prisma/client": "4.13.0",
     "@trpc/client": "10.20.0",
     "@trpc/server": "10.20.0",
