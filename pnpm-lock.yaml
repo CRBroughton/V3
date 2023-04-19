@@ -19,7 +19,7 @@ specifiers:
   consola: ^3.1.0
   eslint: 8.38.0
   jsdom: ^21.1.1
-  next-auth: 4.22.0
+  next-auth: 4.22.1
   npm-check: ^6.0.1
   nuxt: 3.4.1
   postcss: 8.4.21
@@ -35,11 +35,11 @@ specifiers:
   zod: 3.21.4
 
 dependencies:
-  '@next-auth/prisma-adapter': 1.0.5_a6smvnkimirbai6k64h2bmekwe
+  '@next-auth/prisma-adapter': 1.0.5_mj4zmq54qgbwr7klxt7lbfwdhu
   '@prisma/client': 4.13.0_prisma@4.13.0
   '@trpc/client': 10.20.0_@trpc+server@10.20.0
   '@trpc/server': 10.20.0
-  next-auth: 4.22.0
+  next-auth: 4.22.1
   superjson: 1.12.2
   trpc-nuxt: 0.9.0_6h4t7n6ksrv4hagmtgl2yasteu
   ts-pattern: 4.2.2
@@ -51,7 +51,7 @@ devDependencies:
   '@nuxt/devtools': 0.4.1_nuxt@3.4.1
   '@nuxt/test-utils': 3.4.1
   '@nuxtjs/tailwindcss': 6.6.6
-  '@sidebase/nuxt-auth': 0.5.0_next-auth@4.22.0
+  '@sidebase/nuxt-auth': 0.5.0_next-auth@4.22.1
   '@types/node': 18.15.0
   '@vitejs/plugin-vue': 4.1.0
   '@vitest/ui': 0.30.1
@@ -1420,14 +1420,14 @@ packages:
       is-promise: 4.0.0
     dev: true
 
-  /@next-auth/prisma-adapter/1.0.5_a6smvnkimirbai6k64h2bmekwe:
+  /@next-auth/prisma-adapter/1.0.5_mj4zmq54qgbwr7klxt7lbfwdhu:
     resolution: {integrity: sha512-VqMS11IxPXrPGXw6Oul6jcyS/n8GLOWzRMrPr3EMdtD6eOalM6zz05j08PcNiis8QzkfuYnCv49OvufTuaEwYQ==}
     peerDependencies:
       '@prisma/client': '>=2.26.0 || >=3'
       next-auth: ^4
     dependencies:
       '@prisma/client': 4.13.0_prisma@4.13.0
-      next-auth: 4.22.0
+      next-auth: 4.22.1
     dev: false
 
   /@nodelib/fs.scandir/2.1.5:
@@ -2065,14 +2065,14 @@ packages:
       rollup: 3.20.2
     dev: true
 
-  /@sidebase/nuxt-auth/0.5.0_next-auth@4.22.0:
+  /@sidebase/nuxt-auth/0.5.0_next-auth@4.22.1:
     resolution: {integrity: sha512-Zq0laKbRjX3luAJrkSTYE9gkLttFO5LiWB9qq5xiYQGmtKxY9cu8sk9KeUVZ3z6shjEqHdtwM5FFCKGGvwVALA==}
     peerDependencies:
       next-auth: ^4.21.1
     dependencies:
       '@nuxt/kit': 3.4.1
       defu: 6.1.2
-      next-auth: 4.22.0
+      next-auth: 4.22.1
       nitropack: 2.3.3
       requrl: 3.0.2
       ufo: 1.1.1
@@ -7337,8 +7337,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
-  /next-auth/4.22.0:
-    resolution: {integrity: sha512-08+kjnDoE7aQ52O996x6cwA3ffc2CbHIkrCgLYhbE+aDIJBKI0oA9UbIEIe19/+ODYJgpAHHOtJx4izmsgaVag==}
+  /next-auth/4.22.1:
+    resolution: {integrity: sha512-NTR3f6W7/AWXKw8GSsgSyQcDW6jkslZLH8AiZa5PQ09w1kR8uHtR9rez/E9gAq/o17+p0JYHE8QjF3RoniiObA==}
     peerDependencies:
       next: ^12.2.5 || ^13
       nodemailer: ^6.6.5
