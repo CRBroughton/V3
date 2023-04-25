@@ -32,7 +32,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "0.38.5",
     "@changesets/cli": "^2.26.1",
-    "@nuxt/devtools": "^0.4.1",
+    "@nuxt/devtools": "^0.4.2",
     "@nuxt/test-utils": "^3.4.2",
     "@nuxtjs/tailwindcss": "^6.6.6",
     "@sidebase/nuxt-auth": "^0.5.0",
