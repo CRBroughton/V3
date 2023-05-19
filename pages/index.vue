@@ -2,7 +2,7 @@
 import { store } from '~~/store'
 
 const { users, getUsers } = store()
-const { status, data, signIn, signOut } = useSession()
+const { status, data, signIn, signOut } = useAuth()
 
 onMounted(async () => {
   await getUsers()

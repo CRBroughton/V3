@@ -32,6 +32,5 @@ jobs:
       
       - run: pnpm i --frozen-lockfile
       - run: pnpm run prisma:generate
-      - run: pnpm run test:prepare
       - run: pnpm run test
       - run: pnpm run build

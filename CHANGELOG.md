@@ -1,5 +1,12 @@
 # v3
 
+## 0.4.0
+
+### General Changes
+
+- remove redundant test:prepare script
+- update dependencies (nuxt-auth API changes)
+
 ## 0.3.0
 
 ### General changes
