@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "v3",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "pnpm run prisma:generate && nuxt dev",
@@ -45,7 +45,7 @@
     "eslint": "8.39.0",
     "jsdom": "22.0.0",
     "npm-check": "^6.0.1",
-    "nuxt": "3.5.0",
+    "nuxt": "3.6.5",
     "postcss": "8.4.23",
     "prisma": "4.14.1",
     "ts-node-dev": "^2.0.0",
@@ -57,12 +57,17 @@
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.6",
     "@prisma/client": "4.14.1",
-    "@trpc/client": "10.27.0",
-    "@trpc/server": "10.27.0",
+    "@trpc/client": "^10.37.1",
+    "@trpc/server": "^10.37.1",
     "next-auth": "4.22.1",
     "superjson": "1.12.3",
-    "trpc-nuxt": "0.10.2",
+    "trpc-nuxt": "0.10.7",
     "ts-pattern": "4.3.0",
     "zod": "3.21.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "h3": "1.8.0"
+    }
   }
 }
