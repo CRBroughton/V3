@@ -1,5 +1,49 @@
 # v3
 
+## 0.5.0
+
+### General changes
+
+- Added H3 override for conflicting nuxt/trpc versions
+
+
+- update typescript to 5.0.4
+- update eslint config to 0.38.5
+- update trpc to 10.19.1
+- update trpc-nuxt to 0.9.0
+- update eslint to 8.38.0
+- update @nuxt/devtools to 0.3.2
+- update trpc to 10.20.0
+- update next-auth to 4.22.1
+- update prisma to 4.13.0
+- update trpc to 10.21.0
+- update nuxt to 3.4.2
+- update vue-tsc to 1.4.0
+- update @next-auth/prisma-adapter to 1.0.6
+- update vue-tsc to 1.4.2
+- update @nuxt/devtools to 0.4.2
+- update vue-tsc to 1.4.4
+- update vitest to 0.30.1
+- update tailwindcss to 6.6.7
+- update superjson to 1.12.3
+- update eslint to 8.39.0
+- update nuxt/devtools to 3.4.1
+- update @antfu/eslint-config to 0.38.4
+- update nuxt-auth to 0.5.0
+- update trpc to 10.21.1
+- update vitest to 0.30.0
+- update tailwindcss to 6.6.6
+- update postcss to 8.4.23
+- update nuxt to 3.4.3
+- update trpc to 10.21.2
+
+## 0.4.0
+
+### General Changes
+
+- remove redundant test:prepare script
+- update dependencies (nuxt-auth API changes)
+
 ## 0.3.0
 
 ### General changes
