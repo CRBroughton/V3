@@ -15,6 +15,13 @@ datasource db {
 //   url      = env("DATABASE_URL")
 // }
 
+// datasource db {
+//   provider     = "mysql"
+//   relationMode = "prisma"
+//   url          = env("DATABASE_URL")
+// }
+
+
 // Schema for Next Authentication
 
 model Account {
@@ -34,6 +41,8 @@ model Account {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
+  // @@index([userId]) // uncomment for planetscale support
+
 }
 
 model Session {
@@ -42,6 +51,7 @@ model Session {
   userId       String
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  // @@index([userId]) // uncomment for planetscale support
 }
 
 model User {
@@ -69,4 +79,6 @@ model Task {
   ownerId String
   title String
   description String?
+
+  // @@index([ownerId]) // uncomment for planetscale support
 }
