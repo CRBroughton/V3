@@ -1,11 +1,11 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, test, vi } from 'vitest'
 import type { inferProcedureOutput } from '@trpc/server'
 import prisma from '../../mocks'
 import type { AppRouter } from '~~/server/api/router'
 import { testProtectedProcedures, testPublicProcedures, testUser } from '~~/tests/testProcedures'
 
 describe('User Procedure Tests', async () => {
-  // vi.mock('../../prisma/seed')
+  vi.mock('../../prisma/seed')
 
   test('getUsers Procedure - Returns a list of registered users', async () => {
     prisma.user.findMany.mockResolvedValue([testUser])

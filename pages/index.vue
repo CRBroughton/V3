@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import { store } from '~~/store'
-
-const { users, getUsers } = store()
+const usersStore = userStore()
 const { status, data, signIn, signOut } = useAuth()
 
-onMounted(async () => {
-  await getUsers()
+onMounted(() => {
+  usersStore.getUsers()
 })
 
 async function signUserOut() {
@@ -19,7 +17,7 @@ async function signUserIn() {
 </script>
 
 <template>
-  {{ users }}
+  {{ usersStore.users }}
   <Packages />
   <button v-if="status === 'unauthenticated'" @click="signUserIn">
     Sign in

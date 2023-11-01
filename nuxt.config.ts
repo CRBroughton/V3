@@ -2,9 +2,14 @@
 export default defineNuxtConfig({
   modules: [
     '@sidebase/nuxt-auth',
+    '@nuxt/image',
     '@nuxt/devtools',
     '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
   ],
+  imports: {
+    dirs: ['./stores'],
+  },
   build: { transpile: ['trpc-nuxt'] },
   css: ['~/assets/css/main.css'],
   postcss: {
@@ -25,7 +30,7 @@ export default defineNuxtConfig({
     origin: process.env.AUTH_ORIGIN,
   },
   devtools: {
-    enabled: false,
+    enabled: true,
   },
   experimental: {
     componentIslands: false,
