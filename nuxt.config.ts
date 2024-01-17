@@ -28,6 +28,9 @@ export default defineNuxtConfig({
   },
   auth: {
     origin: process.env.AUTH_ORIGIN,
+    provider: {
+      type: 'authjs',
+    },
   },
   devtools: {
     enabled: true,
